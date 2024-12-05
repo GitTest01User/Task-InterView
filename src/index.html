@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Chat Application</h1>
+
+        <!-- Login Form -->
+        <div id="loginForm" class="login-form">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Enter your email" />
+            <input type="password" id="password" placeholder="Enter your password" />
+            <button id="loginButton">Login</button>
+            <div id="loginError" style="color: red; display: none;">Invalid email or password, please try again.</div>
+        </div>
+
+        <!-- Room Selection -->
+        <div id="roomSelection" class="room-selection" style="display: none;">
+            <label for="room">Choose a room:</label>
+            <input type="text" id="room" placeholder="Room Name">
+            <button id="joinRoom">Join Room</button>
+        </div>
+
+        <!-- Chat Area -->
+        <div id="chatArea" class="chat-area" style="display: none;">
+            <div id="messages"></div>
+        </div>
+
+        <!-- Message Input -->
+        <div id="messageInputContainer" class="message-input" style="display: none;">
+            <input type="text" id="messageInput" placeholder="Type a message..." />
+            <button id="sendMessage">Send</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="./assets/javascript/javascript.js"></script>
+</body>
+
+</html>
